@@ -10,7 +10,7 @@
 {{ config(materialized='table') }}
 
 with farms_count_cte as (
-    SELECT state, year, estimate as cnt_estimate FROM donghwa.mrp_bronze.arms_ingest WHERE variable_id = "kount" AND state != "all"
+    SELECT state, year, estimate as cnt_estimate FROM donghwa.usda_arms_bronze.arms_ingest WHERE variable_id = "kount" AND state != "all"
 )
 
 select *
