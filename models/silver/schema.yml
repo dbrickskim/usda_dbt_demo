@@ -1,0 +1,19 @@
+
+version: 2
+
+models:
+  - name: farms_count_model
+    description: "Farms count projection by each state"
+    columns:
+      - name: state
+        description: "State"
+        tests:
+          - not_null
+      - name: year
+        description: "Estimation year"
+        tests:
+          - not_null          
+      - name: cnt_estimate
+        description: "Count estimate"
+        tests:
+          - not_null
